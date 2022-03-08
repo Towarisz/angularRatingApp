@@ -1,5 +1,5 @@
 import { PostsService } from './../posts.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-home-page',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.scss'],
 })
 
-export class HomePageComponent implements OnInit {
+export class HomePageComponent implements OnDestroy {
   posts:any;
   deletePost;
   interval;
@@ -19,8 +19,11 @@ export class HomePageComponent implements OnInit {
     this.interval = setInterval(()=>{this.updateChildrenTimeBy1s()},1000)
   }
   
-  ngOnInit(): void {    
+  ngOnDestroy(): void {
+    clearInterval(this.interval)
   }
+
+  
 
   updateChildrenTimeBy1s(){
     this.posts.forEach((el: { time: number; }) => {

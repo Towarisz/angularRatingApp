@@ -1,1 +1,7 @@
-<p>user-page works!</p>
+<div class="grid">
+    <div>username</div><div><input type="text" [value]="username" (change)="save($event)" name="username"></div>
+    <div>nickname</div><div><input type="text" [value]="nickname" name="nickname" (change)="save($event)"></div>
+    <div>e-mail adress</div><div><input type="text" [value]="emailAdress" name="emailAdress" (change)="save($event)"></div>
+    <div>phone number</div><div><input type="text" [value]="phoneNumber" name="phoneNumber" (change)="save($event)"></div>
+    <div>adress</div><div><input type="text" [value]="adress" name="adress" (change)="save($event)"></div>
+</div>

@@ -1,3 +1,5 @@
+import { UpdateTimeService } from './update-time.service';
+import { UserDataService } from './user-data.service';
 import { RouterModule } from '@angular/router';
 import { PostsService } from './posts.service';
 import { NgModule } from '@angular/core';
@@ -22,7 +24,7 @@ import { TimeFormatterPipe } from './time-formatter.pipe';
     PageNotFoundComponent,
     UserPageComponent,
     ContactUsPageComponent,
-    TimeFormatterPipe
+    TimeFormatterPipe,
   ],
   imports: [
     BrowserModule,
@@ -34,9 +36,11 @@ import { TimeFormatterPipe } from './time-formatter.pipe';
         {path:'contactUs',component:ContactUsPageComponent},
         {path:'**',component:PageNotFoundComponent},
       ]),
-  ],
+    ],
   providers: [
-    PostsService
+    PostsService,
+    UserDataService,
+    UpdateTimeService
   ],
   bootstrap: [AppComponent]
 })

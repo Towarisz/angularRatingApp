@@ -14,7 +14,7 @@ export class PostsService {
     {img:"https://picsum.photos/500", name:"obrazek" ,score:5 ,time:9},
     {img:"https://picsum.photos/600", name:"obrazek" ,score:5 ,time:3600},
     {img:"https://picsum.photos/700", name:"obrazek" ,score:5 ,time:2030495},
-    {img:"https://picsum.photos/800", name:"obrazek" ,score:5 ,time:1237969},
+    {img:"https://picsum.photos/800", name:"obrazek" ,score:5 ,time:12379},
   ]
   }
   get posts(){
