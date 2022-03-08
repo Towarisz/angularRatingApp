@@ -15,7 +15,8 @@ export class PostsService {
     {img:"https://picsum.photos/600", name:"obrazek" ,score:5 ,time:3600},
     {img:"https://picsum.photos/700", name:"obrazek" ,score:5 ,time:2030495},
     {img:"https://picsum.photos/800", name:"obrazek" ,score:5 ,time:12379},
-  ]
+    ]
+    setInterval(()=>{this._posts.forEach((el: { time: number; }) => {el.time++;})},1000) // update time
   }
   get posts(){
     return this._posts;
@@ -26,4 +27,5 @@ export class PostsService {
   delPost(id:number){
     this._posts.splice(id,1);
   }
+  
 }

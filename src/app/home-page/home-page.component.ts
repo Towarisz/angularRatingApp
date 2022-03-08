@@ -1,5 +1,5 @@
 import { PostsService } from './../posts.service';
-import { Component, OnDestroy } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home-page',
@@ -7,27 +7,14 @@ import { Component, OnDestroy } from '@angular/core';
   styleUrls: ['./home-page.component.scss'],
 })
 
-export class HomePageComponent implements OnDestroy {
+export class HomePageComponent {
   posts:any;
   deletePost;
-  interval;
   constructor(postService: PostsService) {
     this.posts = postService.posts;
     this.deletePost = function(id:number){
       postService.delPost(id);
     }
-    this.interval = setInterval(()=>{this.updateChildrenTimeBy1s()},1000)
   }
   
-  ngOnDestroy(): void {
-    clearInterval(this.interval)
-  }
-
-  
-
-  updateChildrenTimeBy1s(){
-    this.posts.forEach((el: { time: number; }) => {
-      el.time++;
-    });      
-  }
 }
