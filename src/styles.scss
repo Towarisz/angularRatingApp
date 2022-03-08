@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+app-nav-bar{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 2px solid black;
+}
+
+app-nav-bar a{
+    text-decoration: none;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.active{
+    border-bottom: 1px solid black;
+}
+
+.postComponent{
+    width: 250px;
+    height: 250px;
+    display: flex;
+    border: 1px solid black;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 50px;
+}
+
+.postComponent img{
+    width: 200px;
+
+}
+
+app-home-page{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.itemDescription{
+    display: flex;
+    background-color: rgba(100,100,100,0.7);
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+}

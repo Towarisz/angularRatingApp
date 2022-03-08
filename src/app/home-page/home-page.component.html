@@ -1,0 +1,1 @@
+<app-post *ngFor="let post of posts;index as i" name="{{post.name}}" img="{{post.img}}" [score]=post.score [time]=post.time (click)="deletePost(i)"></app-post>
