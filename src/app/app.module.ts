@@ -1,3 +1,4 @@
+import { ContactService } from './contact.service';
 import { UpdateTimeService } from './update-time.service';
 import { UserDataService } from './user-data.service';
 import { RouterModule } from '@angular/router';
@@ -40,7 +41,8 @@ import { TimeFormatterPipe } from './time-formatter.pipe';
   providers: [
     PostsService,
     UserDataService,
-    UpdateTimeService
+    UpdateTimeService,
+    ContactService,
   ],
   bootstrap: [AppComponent]
 })

@@ -1,1 +1,19 @@
-<p>contact-us-page works!</p>
+<form class="contact-form">
+    <div class="form-group">
+        <label for="problem">Select type of report</label>
+        <select name="problem" (change)="select($event)">
+            <option value="genQuestion">General question</option>
+            <option value="fetSuggestion">Feature suggestion</option>
+            <option value="bugReport">Bug report</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="sDesc">Topic</label>
+        <input type="text" name="sDesc" minlength="3" maxlength="32" required (change)="topic($event)">
+    </div>
+    <div class="form-group">
+        <label for="longDesc">Description</label>
+        <textarea name="longDEsc" cols="30" rows="10" required maxlength="500" (change)="text($event)"></textarea>
+    </div>
+    <button (click)="send($event)">Submit</button>
+</form>

@@ -70,3 +70,35 @@ app-home-page{
     margin-bottom: 10px;
     text-align: center;
 }
+
+.contact-form{
+    height: 250px;
+    margin: 100px auto;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 25%;
+}
+
+.form-group{
+    width: 100%;
+    background: lightgrey;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+}
+
+.form-group label{
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    border-bottom: 1px solid grey;
+}
+
+.form-group input{
+    width: 80%;
+}
+textarea{
+    resize: none;
+}
