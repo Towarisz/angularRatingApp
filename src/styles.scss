@@ -107,11 +107,16 @@ textarea{
    font-weight: bold;
    color: darkgray;
 }
+
 .popUp{
     display: flex;
     position: absolute;
-    background-color: rgba(100,100,100,0.6);
+    background-color: rgba(100,100,100,0.9);
     justify-content: center;
+    left: 50%;
+    margin:100px -12.5%;
+    border: 3px solid gray;
+    border-radius: 10px;
 }
 
 .flex{
@@ -125,6 +130,9 @@ textarea{
 
 .popUp form{
     width: 60%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
 }
 
 .width100{

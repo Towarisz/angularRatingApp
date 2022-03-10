@@ -2,11 +2,11 @@
     <form #form="ngForm">
         <div class="form-group">
             <label for="postTitle">Post Title</label>
-            <input type="text" name="postTitle" [(ngModel)]="postTitle" minlength="3" maxlength="10" required>
+            <input type="text" name="postTitle" [(ngModel)]="postTitle" minlength="3" maxlength="10" required autocomplete="off">
         </div>
         <div class="form-group">
             <label for="postImage">Post Image</label>
-            <input type="text" name="postImage" [(ngModel)]="postImage" required pattern="https?://.+">
+            <input type="text" name="postImage" [(ngModel)]="postImage" required pattern="https?://.+" autocomplete="off">
         </div>
         <div class="flex">
             <button (click)="hide()">Cancel</button>
