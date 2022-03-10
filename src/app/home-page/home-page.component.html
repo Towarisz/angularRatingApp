@@ -1,1 +1,24 @@
-<app-post *ngFor="let post of posts;index as i" name="{{post.name}}" img="{{post.img}}" [score]=post.score [time]=post.time (click)="deletePost(i)"></app-post>
+<div *ngIf="visible"class="popUp form">
+    <form #form="ngForm">
+        <div class="form-group">
+            <label for="postTitle">Post Title</label>
+            <input type="text" name="postTitle" [(ngModel)]="postTitle" minlength="3" maxlength="10" required>
+        </div>
+        <div class="form-group">
+            <label for="postImage">Post Image</label>
+            <input type="text" name="postImage" [(ngModel)]="postImage" required pattern="https?://.+">
+        </div>
+        <div class="flex">
+            <button (click)="hide()">Cancel</button>
+            <button (click)="add()" [disabled]="!form.valid">Add</button>
+        </div>
+    </form>
+</div>
+<app-post *ngFor="let post of posts;index as i" 
+ name="{{post.name}}" 
+ img="{{post.img}}"
+ [score]=post.score 
+ [time]=post.time 
+ (click)="deletePost(i)"></app-post>
+
+<div class="postComponent addPost" (click)="show()"><span>+</span></div>

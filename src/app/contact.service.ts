@@ -4,6 +4,13 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ContactService {
-
-  constructor() { }
+  private _data:any={};
+  constructor() {
+    this._data.selValue="";
+    this._data.topValue="";
+    this._data.desValue="";
+   }
+   set data(info:any){
+    this._data = info;
+   }
 }

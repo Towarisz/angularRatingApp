@@ -35,7 +35,7 @@ app-nav-bar a{
 
 .postComponent img{
     width: 200px;
-
+    height: 200px;
 }
 
 app-home-page{
@@ -71,7 +71,7 @@ app-home-page{
     text-align: center;
 }
 
-.contact-form{
+.form{
     height: 250px;
     margin: 100px auto;
     justify-content: center;
@@ -81,7 +81,6 @@ app-home-page{
 }
 
 .form-group{
-    width: 100%;
     background: lightgrey;
     margin: 5px;
     border-radius: 5px;
@@ -101,4 +100,33 @@ app-home-page{
 }
 textarea{
     resize: none;
+}
+.addPost{
+   font-size: 210px;
+   background-color: lightgrey;
+   font-weight: bold;
+   color: darkgray;
+}
+.popUp{
+    display: flex;
+    position: absolute;
+    background-color: rgba(100,100,100,0.6);
+    justify-content: center;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.popUp button{
+    width:100px;
+}
+
+.popUp form{
+    width: 60%;
+}
+
+.width100{
+    width: 100%;
 }

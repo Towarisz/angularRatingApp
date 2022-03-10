@@ -9,12 +9,35 @@ import { Component } from '@angular/core';
 
 export class HomePageComponent {
   posts:any;
-  deletePost;
+  visible=false;
+  postTitle:string="";
+  postImage:string="";
+  _postService:PostsService;
   constructor(postService: PostsService) {
+    this._postService = postService;
     this.posts = postService.posts;
-    this.deletePost = function(id:number){
-      postService.delPost(id);
-    }
   }
+
+  deletePost(id:number){
+    this._postService.delPost(id);
+  };
   
+  show(){
+    this.visible = true;
+  }
+
+  hide(){
+    this.visible=false;
+    this.clearForm()
+  }
+
+  add(){
+    this._postService.addPost({img : this.postImage, name:this.postTitle, score:0, time:0})
+    this.hide();
+  }
+
+  clearForm(){
+    this.postImage="";
+    this.postTitle="";
+  }
 }

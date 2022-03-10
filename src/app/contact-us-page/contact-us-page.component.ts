@@ -8,17 +8,19 @@ import { Component } from '@angular/core';
 })
 export class ContactUsPageComponent {
   data:any = {};
+  _contact:ContactService;
   constructor(contact:ContactService) {
-    this.data.selValue="genQuestion";
-    this.data.topValue="";
-    this.data.desValue="";
+    this._contact = contact
    }
 
   ngOnInit(): void {
   }
-  send(x:any){x.preventDefault(); console.log(this.data);
+
+  send(x:any){x.preventDefault(); this._contact.data=this.data;this.clearForm()}
+
+  clearForm(){
+    this.data.selValue="";
+    this.data.topValue="";
+    this.data.desValue="";
   }
-  select(x:any){this.data.selValue=x.target.value}
-  topic(x:any){this.data.topValue=x.target.value}
-  text(x:any){this.data.desValue=x.target.value}
 }

@@ -15,6 +15,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { UserPageComponent } from './user-page/user-page.component';
 import { ContactUsPageComponent } from './contact-us-page/contact-us-page.component';
 import { TimeFormatterPipe } from './time-formatter.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { TimeFormatterPipe } from './time-formatter.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     RouterModule.forRoot(
       [
         {path:'',component:HomePageComponent},
