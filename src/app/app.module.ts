@@ -1,5 +1,4 @@
 import { ContactService } from './contact.service';
-import { UpdateTimeService } from './update-time.service';
 import { UserDataService } from './user-data.service';
 import { RouterModule } from '@angular/router';
 import { PostsService } from './posts.service';
@@ -43,7 +42,6 @@ import { FormsModule } from '@angular/forms';
   providers: [
     PostsService,
     UserDataService,
-    UpdateTimeService,
     ContactService,
   ],
   bootstrap: [AppComponent]
