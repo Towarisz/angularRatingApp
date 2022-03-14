@@ -13,6 +13,7 @@ export class UserPageComponent{
   @Input() adress!:string;
   @Input() emailAdress!:string;
   _userData:UserDataService;
+  
   constructor(userData:UserDataService) { 
     this._userData = userData;
       this.username = userData.data.username

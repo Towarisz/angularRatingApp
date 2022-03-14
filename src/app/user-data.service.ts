@@ -15,8 +15,7 @@ export class UserDataService {
       this._data[key] = value;
    }
 }
-   
-   
+     
    get data(){
      return this._data;
    }

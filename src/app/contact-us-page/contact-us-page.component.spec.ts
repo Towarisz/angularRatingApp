@@ -1,3 +1,4 @@
+import { NgForm } from '@angular/forms';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ContactUsPageComponent } from './contact-us-page.component';
@@ -8,7 +9,7 @@ describe('ContactUsPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ContactUsPageComponent ]
+      declarations: [ ContactUsPageComponent , NgForm]
     })
     .compileComponents();
   });
