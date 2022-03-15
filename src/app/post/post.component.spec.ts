@@ -23,4 +23,17 @@ describe('PostComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
+  it("inputs should work",()=>{
+    component.name="works"
+    component.score=5
+    component.time=10
+    component.img="aaa"
+    fixture.detectChanges()
+    expect(fixture.nativeElement.querySelector("h3").innerText).toContain("works")
+    expect(fixture.nativeElement.querySelector(".score").innerText).toContain(5)
+    expect(fixture.nativeElement.querySelector(".posted").innerText).toContain(10)
+    expect(fixture.nativeElement.querySelector("img").src).toContain("aaa")
+  })
+  
 });

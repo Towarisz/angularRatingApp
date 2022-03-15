@@ -1,3 +1,4 @@
+import { NgForm } from '@angular/forms';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomePageComponent } from './home-page.component';
@@ -8,7 +9,7 @@ describe('HomePageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomePageComponent ]
+      declarations: [ HomePageComponent, NgForm ]
     })
     .compileComponents();
   });
@@ -22,4 +23,10 @@ describe('HomePageComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it("should show add prompt",()=>{
+    fixture.nativeElement.querySelector(".addPost").click()
+    fixture.detectChanges()
+    expect(fixture.nativeElement.querySelector(".popUp")).toBeTruthy()
+  })
 });
