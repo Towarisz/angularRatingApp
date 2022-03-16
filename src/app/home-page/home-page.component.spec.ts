@@ -29,4 +29,10 @@ describe('HomePageComponent', () => {
     fixture.detectChanges()
     expect(fixture.nativeElement.querySelector(".popUp")).toBeTruthy()
   })
+
+  it('should generate post component',()=>{
+    component.posts = [{img:"https://picsum.photos/200", name:"obrazek" ,score:5 ,time:40}]
+    fixture.detectChanges()
+    expect(fixture.nativeElement.querySelector("app-post")).toBeTruthy()
+  })
 });

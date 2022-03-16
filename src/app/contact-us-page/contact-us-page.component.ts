@@ -8,15 +8,13 @@ import { Component } from '@angular/core';
 })
 export class ContactUsPageComponent {
   data:any = {};
-  _contact:ContactService;
-  constructor(contact:ContactService) {
-    this._contact = contact
+  constructor(public contact:ContactService) {
    }
 
   ngOnInit(): void {
   }
 
-  send(x:any){x.preventDefault(); this._contact.data=this.data;this.clearForm()}
+  send(x:any){x.preventDefault(); this.contact.data=this.data;this.clearForm()}
 
   clearForm(){
     this.data.selValue="";

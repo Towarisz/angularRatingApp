@@ -12,14 +12,12 @@ export class HomePageComponent {
   visible=false;
   postTitle:string="";
   postImage:string="";
-  _postService:PostsService;
-  constructor(postService: PostsService) {
-    this._postService = postService;
+  constructor(public postService: PostsService) {
     this.posts = postService.posts;
   }
 
   deletePost(id:number){
-    this._postService.delPost(id);
+    this.postService.delPost(id);
   };
   
   show(){
@@ -32,7 +30,7 @@ export class HomePageComponent {
   }
 
   add(){
-    this._postService.addPost({img : this.postImage, name:this.postTitle, score:0, time:0})
+    this.postService.addPost({img : this.postImage, name:this.postTitle, score:0, time:0})
     this.hide();
   }
 
