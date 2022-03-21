@@ -1,3 +1,4 @@
+import { HttpRequestService } from './http-request.service';
 import { ContactService } from './contact.service';
 import { UserDataService } from './user-data.service';
 import { RouterModule } from '@angular/router';
@@ -15,6 +16,7 @@ import { UserPageComponent } from './user-page/user-page.component';
 import { ContactUsPageComponent } from './contact-us-page/contact-us-page.component';
 import { TimeFormatterPipe } from './time-formatter.pipe';
 import { FormsModule } from '@angular/forms';
+import { WeatherComponent } from './weather/weather.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { FormsModule } from '@angular/forms';
     UserPageComponent,
     ContactUsPageComponent,
     TimeFormatterPipe,
+    WeatherComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +39,7 @@ import { FormsModule } from '@angular/forms';
         {path:'',component:HomePageComponent},
         {path:'user',component:UserPageComponent},
         {path:'contactUs',component:ContactUsPageComponent},
+        {path:'weather',component:WeatherComponent},
         {path:'**',component:PageNotFoundComponent},
       ]),
     ],
@@ -43,6 +47,7 @@ import { FormsModule } from '@angular/forms';
     PostsService,
     UserDataService,
     ContactService,
+    HttpRequestService,
   ],
   bootstrap: [AppComponent]
 })
