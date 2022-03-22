@@ -6,7 +6,7 @@
     <option value="51.79785596545954;19.510938993914138">Łódź</option>
 </select><label>Select City</label>
 <app-loading *ngIf="!loaded"></app-loading>
-<div *ngIf="loaded">
+<div *ngIf="loaded && data">
     <p>Cloud Cover: {{data.cloudcover | weatherFormatter:0}}</p>
     <p>Lifted index: {{data.lifted_index | weatherFormatter:1}}</p>
     <p>Precipitation Type: {{data.prec_type | weatherFormatter:2}}</p>
