@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { PostsService } from './posts.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,8 @@ import { ContactUsPageComponent } from './contact-us-page/contact-us-page.compon
 import { TimeFormatterPipe } from './time-formatter.pipe';
 import { FormsModule } from '@angular/forms';
 import { WeatherComponent } from './weather/weather.component';
+import { WeatherFormatterPipe } from './weather-formatter.pipe';
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -29,9 +32,12 @@ import { WeatherComponent } from './weather/weather.component';
     ContactUsPageComponent,
     TimeFormatterPipe,
     WeatherComponent,
+    WeatherFormatterPipe,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     RouterModule.forRoot(

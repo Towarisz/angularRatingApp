@@ -1,1 +1,18 @@
-
+<select [(ngModel)]="location" (change)="getData()">
+    <option value="50.063717687651625;19.945476657664518">Kraków</option>
+    <option value="52.2775712497972;21.035727521323096">Warszawa</option>
+    <option value="50.88435264725249;20.55075181672246">Kielce</option>
+    <option value="50.308863320173295;19.045288276644296">Katowice</option>
+    <option value="51.79785596545954;19.510938993914138">Łódź</option>
+</select><label>Select City</label>
+<app-loading *ngIf="!loaded"></app-loading>
+<div *ngIf="loaded">
+    <p>Cloud Cover: {{data.cloudcover | weatherFormatter:0}}</p>
+    <p>Lifted index: {{data.lifted_index | weatherFormatter:1}}</p>
+    <p>Precipitation Type: {{data.prec_type | weatherFormatter:2}}</p>
+    <p>Precipitation Amount: {{data.prec_amount | weatherFormatter:3}}</p>
+    <p>Air temperature: {{data.temp2m}}°C</p>
+    <p>Relative Humidity: {{data.rh2m}}</p>
+    <p>Wind Direction: {{data.wind10m.direction}}</p>
+    <p>Wind Speed: {{data.wind10m.speed|weatherFormatter:4}}</p>
+</div>
