@@ -20,7 +20,7 @@ export class WeatherComponent implements OnInit {
   getData(){
     this.loaded = false
     const lon = this.location.split(";")[0]
-    const lat = this.location.split(";")[0]
+    const lat = this.location.split(";")[1]
     let params = new HttpParams();
     params = params.append("lon",lon)
     params = params.append("lat",lat)
